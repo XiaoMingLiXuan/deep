@@ -191,7 +191,7 @@ trainer = paddle.optimizer.SGD(learning_rate=0.1, parameters=net.parameters())
 ```{.python .input}
 #@tab all
 num_epochs = 10
-d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
+d2l.train_ch13(net, train_iter, test_iter, loss, num_epochs, trainer)
 ```
 
 和以前一样，这个算法使结果收敛到一个相当高的精度，而且这次的代码比之前更精简了。
