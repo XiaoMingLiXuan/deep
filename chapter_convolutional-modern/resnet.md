@@ -330,7 +330,7 @@ class ResnetBlock(tf.keras.layers.Layer):
                 self.residual_layers.append(Residual(num_channels))
 
     def call(self, X):
-        for layer in self.residual_layers.layers:
+        for layer in self.residual_layers:
             X = layer(X)
         return X
 ```
