@@ -602,7 +602,7 @@ computation(X, Y)
 
 :begin_tab:`pytorch`
 将深度学习框架定义的张量[**转换为NumPy张量（`ndarray`）**]很容易，反之也同样容易。
-torch张量和numpy数组将共享它们的底层内存，就地操作更改一个张量也会同时更改另一个张量。
+通过torch.numpy将torch张量转换为numpy数组，或是通过torch.from_numpy将numpy数组转换为torch张量，torch张量和numpy数组将共享它们的底层内存，就地操作更改一个张量也会同时更改另一个张量。而torch.tensor是为numpy数组新建一个副本，二者不共享内存。
 :end_tab:
 
 ```{.python .input}
@@ -614,7 +614,7 @@ type(A), type(B)
 ```{.python .input}
 #@tab pytorch
 A = X.numpy()
-B = torch.tensor(A)
+B = torch.from_numpy(A)
 type(A), type(B)
 ```
 
