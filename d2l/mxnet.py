@@ -2071,7 +2071,7 @@ class TokenEmbedding:
         data_dir = d2l.download_extract(embedding_name)
         # GloVe网站：https://nlp.stanford.edu/projects/glove/
         # fastText网站：https://fasttext.cc/
-        with open(os.path.join(data_dir, 'vec.txt'), 'r') as f:
+        with open(os.path.join(data_dir, 'vec.txt'), 'r', encoding='utf-8') as f:
             for line in f:
                 elems = line.rstrip().split(' ')
                 token, elems = elems[0], [float(elem) for elem in elems[1:]]
