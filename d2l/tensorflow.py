@@ -1,4 +1,4 @@
-DATA_HUB = dict()
+gitDATA_HUB = dict()
 DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
 
 import numpy as np
