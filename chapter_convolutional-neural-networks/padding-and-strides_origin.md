@@ -239,11 +239,11 @@ there is no output because the input element cannot fill the window
 In general, when the stride for the height is $s_h$
 and the stride for the width is $s_w$, the output shape is
 
-$$\lfloor(n_h-k_h+p_h+s_h)/s_h\rfloor \times \lfloor(n_w-k_w+p_w+s_w)/s_w\rfloor.$$
+$$\lceil(n_h-k_h+p_h+s_h)/s_h\rceil \times \lceil(n_w-k_w+p_w+s_w)/s_w\rceil.$$
 
 If we set $p_h=k_h-1$ and $p_w=k_w-1$,
 then the output shape will be simplified to
-$\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$.
+$\lceil(n_h+s_h-1)/s_h\rceil \times \lceil(n_w+s_w-1)/s_w\rceil$.
 Going a step further, if the input height and width
 are divisible by the strides on the height and width,
 then the output shape will be $(n_h/s_h) \times (n_w/s_w)$.
