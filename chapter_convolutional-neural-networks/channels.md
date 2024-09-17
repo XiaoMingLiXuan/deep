@@ -45,7 +45,7 @@ import paddle
 #@tab mxnet, pytorch, paddle
 def corr2d_multi_in(X, K):
     # 先遍历“X”和“K”的第0个维度（通道维度），再把它们加在一起
-    return sum(d2l.corr2d(x, k) for x, k in zip(X, K))
+    return sum(d2l.corr2d(x, k) for x, k in zip(X[0], K[0]))
 ```
 
 ```{.python .input}
